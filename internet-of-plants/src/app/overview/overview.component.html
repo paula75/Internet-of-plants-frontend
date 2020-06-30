@@ -1,4 +1,33 @@
-<p>overview works!</p>
-<mat-card>Albahaca</mat-card>
-<mat-card>Menta</mat-card>
-<mat-card>Tomate cherry</mat-card>
+
+<div >
+  <div class="overview-style" fxFlex="100" fxLayoutAlign="start left" fxLayoutGap="10px" >
+    <ng-container *ngFor="let plant of plantsList" >
+
+      <mat-card>
+        <mat-card-title> {{plant.name}} </mat-card-title>
+        <mat-card-subtitle> {{plant.scientificName}} </mat-card-subtitle>
+        <mat-card-content>
+          <img class="image-plant" src="assets/photos/sunflower.jpg" >
+        </mat-card-content>
+        <mat-card-content> {{plant.description}} </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+
+</div>
+
+<!-- <mat-grid-list cols="2" rowHeight="2:1" >
+  <mat-grid-list> 2 </mat-grid-list>
+</mat-grid-list> -->
+
+<!-- <mat-grid-list cols="2" rowHeight="4:1">
+  <div *ngFor="let plant of plantsList" >
+    <mat-grid-tile>
+      <mat-card>
+        <mat-card-title> {{plant.name}} </mat-card-title>
+        <mat-card-subtitle> {{plant.scientificName}} </mat-card-subtitle>
+        <mat-card-content> {{plant.description}} </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list> -->

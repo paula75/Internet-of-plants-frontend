@@ -15,7 +15,7 @@ export interface Plant {
 
 
 export class OverviewComponent implements OnInit {
-  plantsList: Plant[];
+  plantsList: Plant[] = [];
   sunflower: Plant = {
     name: 'Girasol',
     scientificName: 'genus Helianthus',
@@ -23,10 +23,35 @@ export class OverviewComponent implements OnInit {
     description: 'Plantas fabulosas',
     photoName: 'sunflower.jpg'
   };
+  basel: Plant = {
+    name: 'Albahaca',
+    scientificName: 'genus Helianthus',
+    plantTime: 'Verano',
+    description: 'Especial para pizzas',
+    photoName: 'sunflower.jpg'
+  };
+  cherry: Plant = {
+    name: 'Tomate Cherry',
+    scientificName: 'genus Helianthus',
+    plantTime: 'Verano',
+    description: 'Los mejores tomates',
+    photoName: 'sunflower.jpg'
+  };
+  mint: Plant = {
+    name: 'Menta',
+    scientificName: 'genus Helianthus',
+    plantTime: 'Verano',
+    description: 'Para una limonada',
+    photoName: 'sunflower.jpg'
+  };
+
   constructor() { }
 
   ngOnInit() {
     this.plantsList.push(this.sunflower);
+    this.plantsList.push(this.basel);
+    this.plantsList.push(this.cherry);
+    this.plantsList.push(this.mint);
   }
 
 }
