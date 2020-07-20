@@ -5,6 +5,35 @@
 }
 
 .image-plant {
-  height: 100px;
-  width: 100px;
+  height: 300px;
+  width: 300px;
+}
+
+.plant-card {
+  box-shadow: none !important;
+  background-color: white;
+  padding: 30px 10px;
+}
+
+.data-card {
+  border: 1px solid lightgray;
+  box-shadow: none !important;
+  background-color: white;
+}
+
+.title-plant {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  line-height: 40px;
+}
+.sub-title {
+  font-size: 18px;
+  color: grey;
+  line-height: 30px;
+}
+.description-data {
+  font-size: 18px;
+  color: black;
+  line-height: 25px;
 }

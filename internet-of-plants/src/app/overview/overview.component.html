@@ -1,33 +1,24 @@
 
-<div >
-  <div class="overview-style" fxFlex="100" fxLayoutAlign="start left" fxLayoutGap="10px" >
-    <ng-container *ngFor="let plant of plantsList" >
+<mat-card class="data-card">
+      <div>
+          <div fxLayout="row wrap">
+            <ng-container *ngFor="let value of plantsList">
+                <div class="plant-card" fxFlex="25">
+                    <mat-card class="data-card">
+                        <div fxLayout="column" fxLayoutAlign="start center">
+                            <div >
+                              <img class="image-plant" src={{value.photoName}}>
+                            </div>
+                              <div class="title-plant">{{ value.name }}</div>
+                              <div class="description-data"> {{value.description}} </div>
+                              <div class="description-data"> Temporada de siembra: {{value.plantTime}} </div>
+                              <div class="description-data"> Perenne: {{value.perene}} </div>
+                          </div>
+                    </mat-card>
+                </div>
+            </ng-container>
 
-      <mat-card>
-        <mat-card-title> {{plant.name}} </mat-card-title>
-        <mat-card-subtitle> {{plant.scientificName}} </mat-card-subtitle>
-        <mat-card-content>
-          <img class="image-plant" src="assets/photos/sunflower.jpg" >
-        </mat-card-content>
-        <mat-card-content> {{plant.description}} </mat-card-content>
-      </mat-card>
-    </ng-container>
-  </div>
+          </div>
+      </div>
 
-</div>
-
-<!-- <mat-grid-list cols="2" rowHeight="2:1" >
-  <mat-grid-list> 2 </mat-grid-list>
-</mat-grid-list> -->
-
-<!-- <mat-grid-list cols="2" rowHeight="4:1">
-  <div *ngFor="let plant of plantsList" >
-    <mat-grid-tile>
-      <mat-card>
-        <mat-card-title> {{plant.name}} </mat-card-title>
-        <mat-card-subtitle> {{plant.scientificName}} </mat-card-subtitle>
-        <mat-card-content> {{plant.description}} </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </div>
-</mat-grid-list> -->
+</mat-card>

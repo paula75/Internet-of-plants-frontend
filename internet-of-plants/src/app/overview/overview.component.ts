@@ -5,6 +5,7 @@ export interface Plant {
   scientificName: string;
   plantTime: string;
   description: string;
+  perene: boolean;
   photoName: string;
 }
 @Component({
@@ -18,31 +19,35 @@ export class OverviewComponent implements OnInit {
   plantsList: Plant[] = [];
   sunflower: Plant = {
     name: 'Girasol',
-    scientificName: 'genus Helianthus',
+    scientificName: 'Genus Helianthus',
     plantTime: 'Otoño',
+    perene: true,
     description: 'Plantas fabulosas',
-    photoName: 'sunflower.jpg'
+    photoName: 'assets/photos/sunflower.jpg'
   };
   basel: Plant = {
     name: 'Albahaca',
-    scientificName: 'genus Helianthus',
+    scientificName: 'Genus Helianthus',
     plantTime: 'Verano',
+    perene: false,
     description: 'Especial para pizzas',
-    photoName: 'sunflower.jpg'
+    photoName: 'assets/photos/basil.jpg'
   };
   cherry: Plant = {
     name: 'Tomate Cherry',
-    scientificName: 'genus Helianthus',
+    scientificName: 'Genus Helianthus',
     plantTime: 'Verano',
+    perene: true,
     description: 'Los mejores tomates',
-    photoName: 'sunflower.jpg'
+    photoName: 'assets/photos/cherry-tomato.jpg'
   };
   mint: Plant = {
     name: 'Menta',
-    scientificName: 'genus Helianthus',
+    scientificName: 'Genus Helianthus',
     plantTime: 'Verano',
+    perene: false,
     description: 'Para una limonada',
-    photoName: 'sunflower.jpg'
+    photoName: 'assets/photos/mint.jpeg'
   };
 
   constructor() { }
@@ -52,6 +57,12 @@ export class OverviewComponent implements OnInit {
     this.plantsList.push(this.basel);
     this.plantsList.push(this.cherry);
     this.plantsList.push(this.mint);
+    this.plantsList.push(this.basel);
+    this.plantsList.push(this.cherry);
+    this.plantsList.push(this.basel);
+    this.plantsList.push(this.mint);
+    this.plantsList.push(this.basel);
+
   }
 
 }

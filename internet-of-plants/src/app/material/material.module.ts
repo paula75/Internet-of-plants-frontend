@@ -7,6 +7,9 @@ import {
   MatIconModule,
   MatCardModule
 } from '@angular/material';
+
+
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
@@ -16,6 +19,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatProgressSpinnerModule,
     MatGridListModule
   ],
   exports: [
@@ -24,6 +28,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatProgressSpinnerModule,
     MatGridListModule
   ]
 })
